@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MonsterApp.Context;
 
 namespace MonsterApp.Migrations
 {
     [DbContext(typeof(MonsterDBContext))]
-    partial class MonsterDBContextModelSnapshot : ModelSnapshot
+    [Migration("20190930152903_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,8 +107,8 @@ namespace MonsterApp.Migrations
                     b.ToTable("Users");
 
                     b.HasData(
-                        new { UserId = 1, DateAccountCreated = new DateTime(2019, 9, 30, 10, 38, 51, 832, DateTimeKind.Local), EmailAddress = "ambremandar@gmail.com", FirstName = "Mandar", Gold = 1, LastName = "Ambre", Password = "test123" },
-                        new { UserId = 2, DateAccountCreated = new DateTime(2019, 9, 30, 10, 38, 51, 834, DateTimeKind.Local), EmailAddress = "steve.rossiter@ancoraeducation.com", FirstName = "Steve", Gold = 1, LastName = "Rossiter", Password = "test123" }
+                        new { UserId = 1, DateAccountCreated = new DateTime(2019, 9, 30, 10, 29, 3, 138, DateTimeKind.Local), EmailAddress = "ambremandar@gmail.com", FirstName = "Mandar", Gold = 1, LastName = "Ambre", Password = "test123" },
+                        new { UserId = 2, DateAccountCreated = new DateTime(2019, 9, 30, 10, 29, 3, 141, DateTimeKind.Local), EmailAddress = "steve.rossiter@ancoraeducation.com", FirstName = "Steve", Gold = 1, LastName = "Rossiter", Password = "test123" }
                     );
                 });
 
